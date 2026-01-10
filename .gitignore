@@ -1,0 +1,20 @@
+# CLion 自动生成的文件
+.idea/
+cmake-build-debug/
+cmake-build-release/
+*.iws
+
+# 编译产生的垃圾
+CMakeFiles/
+Makefile
+*.cmake
+*.txt
+!CMakeLists.txt
+
+# STM32 编译产生的二进制文件
+*.bin
+*.hex
+*.elf
+*.map
+*.o
+*.d
