@@ -1,0 +1,107 @@
+[0.012s] Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_driver': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/annin_ar4_driver
+[0.063s] -- The C compiler identification is GNU 13.3.0
+[0.115s] -- The CXX compiler identification is GNU 13.3.0
+[0.132s] -- Detecting C compiler ABI info
+[0.219s] -- Detecting C compiler ABI info - done
+[0.224s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.224s] -- Detecting C compile features
+[0.225s] -- Detecting C compile features - done
+[0.234s] -- Detecting CXX compiler ABI info
+[0.320s] -- Detecting CXX compiler ABI info - done
+[0.328s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.328s] -- Detecting CXX compile features
+[0.328s] -- Detecting CXX compile features - done
+[0.332s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.462s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.522s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.606s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system 
+[0.613s] -- Found controller_manager: 4.39.2 (/opt/ros/jazzy/share/controller_manager/cmake)
+[0.724s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.751s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.792s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.831s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.981s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.989s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.121s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.141s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.160s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.947s] -- Configuring done (1.9s)
+[2.012s] -- Generating done (0.1s)
+[2.017s] -- Build files have been written to: /home/max/github/VisionArm/ROS2/build/annin_ar4_driver
+[2.027s] Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_driver' returned '0': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/annin_ar4_driver
+[2.028s] Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_driver': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/annin_ar4_driver -- -j4 -l4
+[2.084s] [ 25%] [32mBuilding CXX object CMakeFiles/annin_ar4_driver.dir/src/teensy_driver.cpp.o[0m
+[2.084s] [ 25%] [32mBuilding CXX object CMakeFiles/annin_ar4_driver.dir/src/ar_hardware_interface.cpp.o[0m
+[2.084s] [ 37%] [32mBuilding CXX object CMakeFiles/annin_ar4_driver.dir/src/ar_servo_gripper_hw_interface.cpp.o[0m
+[2.084s] [ 50%] [32mBuilding CXX object CMakeFiles/annin_ar4_driver.dir/src/arduino_nano_driver.cpp.o[0m
+[7.560s] [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/src/ar_servo_gripper_hw_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn annin_ar4_driver::ARServoGripperHWInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[7.561s] [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/src/ar_servo_gripper_hw_interface.cpp:13:51:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[7.561s]    13 |   if ([01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+[7.561s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[7.561s] In file included from [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+[7.561s]                  from [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/include/annin_ar4_driver/ar_servo_gripper_hw_interface.hpp:7[m[K,
+[7.561s]                  from [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/src/ar_servo_gripper_hw_interface.cpp:2[m[K:
+[7.561s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:235:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[7.561s]   235 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info)
+[7.561s]       |                          [01;36m[K^~~~~~~[m[K
+[8.041s] [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/src/ar_hardware_interface.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn annin_ar4_driver::ARHardwareInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[8.041s] [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/src/ar_hardware_interface.cpp:10:51:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[8.041s]    10 |   if ([01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+[8.041s]       |       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[8.041s] In file included from [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+[8.042s]                  from [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/include/annin_ar4_driver/ar_hardware_interface.hpp:5[m[K,
+[8.042s]                  from [01m[K/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_driver/src/ar_hardware_interface.cpp:1[m[K:
+[8.042s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:235:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[8.042s]   235 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info)
+[8.042s]       |                          [01;36m[K^~~~~~~[m[K
+[9.356s] [ 62%] [32mBuilding CXX object CMakeFiles/annin_ar4_driver.dir/src/gripper_overcurrent_protection.cpp.o[0m
+[11.834s] [ 75%] [32m[1mLinking CXX shared library libannin_ar4_driver.so[0m
+[12.293s] [ 75%] Built target annin_ar4_driver
+[12.318s] [ 87%] [32mBuilding CXX object CMakeFiles/run_arduino_nano.dir/src/run_arduino_nano.cpp.o[0m
+[16.279s] [100%] [32m[1mLinking CXX executable run_arduino_nano[0m
+[16.453s] [100%] Built target run_arduino_nano
+[16.463s] Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_driver' returned '0': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/annin_ar4_driver -- -j4 -l4
+[16.464s] Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_driver': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/annin_ar4_driver
+[16.471s] -- Install configuration: ""
+[16.472s] -- Execute custom install script
+[16.472s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/lib/annin_ar4_driver/run_arduino_nano
+[16.481s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver//hardware_interface_plugin.xml
+[16.488s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/ar_hardware_interface.hpp
+[16.495s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/ar_servo_gripper_hw_interface.hpp
+[16.502s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/arduino_nano_driver.hpp
+[16.510s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/gripper_overcurrent_protection.hpp
+[16.518s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/include/annin_ar4_driver/annin_ar4_driver/teensy_driver.hpp
+[16.530s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/config/controllers.yaml
+[16.537s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/config/driver.yaml
+[16.546s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/config/gripper_driver.yaml
+[16.554s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/config/joint_offsets/mk1.yaml
+[16.562s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/config/joint_offsets/mk2.yaml
+[16.569s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/config/joint_offsets/mk3.yaml
+[16.578s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/launch/driver.launch.py
+[16.585s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/urdf/ar.urdf.xacro
+[16.592s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/lib/annin_ar4_driver/reset_estop.sh
+[16.601s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/environment/library_path.sh
+[16.609s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/environment/library_path.dsv
+[16.617s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/ament_index/resource_index/package_run_dependencies/annin_ar4_driver
+[16.626s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/ament_index/resource_index/parent_prefix_path/annin_ar4_driver
+[16.634s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/environment/ament_prefix_path.sh
+[16.642s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/environment/ament_prefix_path.dsv
+[16.651s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/environment/path.sh
+[16.660s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/environment/path.dsv
+[16.667s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.bash
+[16.675s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.sh
+[16.682s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.zsh
+[16.690s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/local_setup.dsv
+[16.697s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/package.dsv
+[16.705s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/ament_index/resource_index/packages/annin_ar4_driver
+[16.712s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/annin_ar4_driver
+[16.720s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/cmake/ament_cmake_export_targets-extras.cmake
+[16.729s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[16.736s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/cmake/annin_ar4_driverConfig.cmake
+[16.743s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/cmake/annin_ar4_driverConfig-version.cmake
+[16.752s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/package.xml
+[16.759s] -- Installing: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/lib/libannin_ar4_driver.so
+[16.761s] -- Set non-toolchain portion of runtime path of "/home/max/github/VisionArm/ROS2/install/annin_ar4_driver/lib/libannin_ar4_driver.so" to ""
+[16.761s] -- Installing: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/cmake/export_annin_ar4_driverExport.cmake
+[16.761s] -- Installing: /home/max/github/VisionArm/ROS2/install/annin_ar4_driver/share/annin_ar4_driver/cmake/export_annin_ar4_driverExport-noconfig.cmake
+[16.763s] Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_driver' returned '0': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/annin_ar4_driver

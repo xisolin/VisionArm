@@ -1,0 +1,67 @@
+[0.020s] Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/annin_ar4_description
+[0.225s] -- The C compiler identification is GNU 13.3.0
+[0.366s] -- The CXX compiler identification is GNU 13.3.0
+[0.394s] -- Detecting C compiler ABI info
+[0.496s] -- Detecting C compiler ABI info - done
+[0.501s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.502s] -- Detecting C compile features
+[0.504s] -- Detecting C compile features - done
+[0.518s] -- Detecting CXX compiler ABI info
+[0.607s] -- Detecting CXX compiler ABI info - done
+[0.613s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.613s] -- Detecting CXX compile features
+[0.614s] -- Detecting CXX compile features - done
+[0.636s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.769s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.846s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.999s] -- Configuring done (0.9s)
+[1.002s] -- Generating done (0.0s)
+[1.003s] -- Build files have been written to: /home/max/github/VisionArm/ROS2/build/annin_ar4_description
+[1.010s] Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/annin_ar4_description
+[1.011s] Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/annin_ar4_description -- -j4 -l4
+[1.050s] Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/annin_ar4_description -- -j4 -l4
+[1.059s] Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/annin_ar4_description
+[1.067s] -- Install configuration: ""
+[1.067s] -- Execute custom install script
+[1.068s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/base_link.STL
+[1.076s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_1.STL
+[1.088s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_2.STL
+[1.097s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_3.STL
+[1.105s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_4.STL
+[1.113s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_5.STL
+[1.121s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4/link_6.STL
+[1.128s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_gripper/gripper_base_link.stl
+[1.136s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_gripper/gripper_jaw1_link.stl
+[1.144s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_gripper/gripper_jaw2_link.stl
+[1.151s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/base_link.STL
+[1.159s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_1.STL
+[1.166s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_2.STL
+[1.173s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_3.STL
+[1.181s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_4.STL
+[1.189s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_5.STL
+[1.197s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/meshes/ar4_mk3/link_6.STL
+[1.208s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/urdf/ar.ros2_control.xacro
+[1.215s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/urdf/ar.urdf.xacro
+[1.223s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_gazebo.urdf.xacro
+[1.231s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_gripper.ros2_control.xacro
+[1.238s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_gripper_macro.xacro
+[1.245s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/urdf/ar_macro.xacro
+[1.252s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/config/mk1.yaml
+[1.260s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/config/mk2.yaml
+[1.268s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/config/mk3.yaml
+[1.277s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/ament_index/resource_index/package_run_dependencies/annin_ar4_description
+[1.285s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/ament_index/resource_index/parent_prefix_path/annin_ar4_description
+[1.292s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/environment/ament_prefix_path.sh
+[1.300s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/environment/ament_prefix_path.dsv
+[1.309s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/environment/path.sh
+[1.317s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/environment/path.dsv
+[1.324s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/local_setup.bash
+[1.332s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/local_setup.sh
+[1.340s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/local_setup.zsh
+[1.348s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/local_setup.dsv
+[1.355s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/package.dsv
+[1.362s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/ament_index/resource_index/packages/annin_ar4_description
+[1.370s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/cmake/annin_ar4_descriptionConfig.cmake
+[1.377s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/cmake/annin_ar4_descriptionConfig-version.cmake
+[1.384s] -- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_description/share/annin_ar4_description/package.xml
+[1.392s] Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/annin_ar4_description
