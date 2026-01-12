@@ -10,9 +10,12 @@ from moveit.core.robot_state import RobotState
 def main():
     rclpy.init()
 
+
     try:
         vision_arm = MoveItPy(node_name="moveit_python_demo")
     except Exception as e:
+        print("初始化失败，请确保你已经source了环境并且有正确配置。")
+        print("初始化失败，请确保你已经source了环境并且有正确配置。")
         print("初始化失败，请确保你已经source了环境并且有正确配置。")
         print(e)
         return
