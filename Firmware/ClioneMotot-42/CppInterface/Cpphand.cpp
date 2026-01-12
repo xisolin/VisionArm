@@ -1,5 +1,7 @@
 #include "Cpphand.h"
 
+
+
 //
 //                            _ooOoo_
 //                           o8888888o
@@ -66,15 +68,16 @@ void Key_Tick(void* argument)
 void Hardware_Tick(void* argument)
 {
     uint16_t calibrationTable[16384];
-    MT6816_STM32 encoder(calibrationTable);
-    encoder.Init();
+    auto encoder = std::make_unique<MT6816_STM32>(calibrationTable);
+    encoder->Init();
 
-    TB67H450_STM32 TB67H485Motor;
-    TB67H485Motor.Init();
+    auto TB67H485Motor = std::make_unique<TB67H450_STM32>();
+
+    TB67H485Motor->Init();
     for (;;)
     {
-        auto angle = encoder.UpdateAngle();
-        bool calibrated = encoder.IsCalibrated();
+        auto angle = encoder->UpdateAngle();
+        bool calibrated = encoder->IsCalibrated();
         osDelay(50);
     }
 }
