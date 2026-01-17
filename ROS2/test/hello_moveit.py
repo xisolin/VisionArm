@@ -42,6 +42,7 @@ def main():
         print("规划成功，开始执行！")
         print("规划成功，开始执行！")
         print("规划成功，开始执行！")
+        print("规划成功，开始执行！")
         vision_arm.execute(plan_result.trajectory,controllers=[])
     else :
         print("规划失败")
