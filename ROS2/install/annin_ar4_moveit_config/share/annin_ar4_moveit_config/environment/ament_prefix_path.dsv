@@ -1,1 +1,1 @@
-/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config/ament_cmake_environment_hooks/ament_prefix_path.dsv
+prepend-non-duplicate;AMENT_PREFIX_PATH;

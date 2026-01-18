@@ -1,1 +1,1 @@
-/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/annin_ar4_moveit_config
+annin_ar4_description;gripper_controllers;launch;launch_param_builder;launch_ros;moveit_kinematics;moveit_planners;moveit_ros_move_group;moveit_ros_visualization;moveit_simple_controller_manager;rviz2;urdf;xacro

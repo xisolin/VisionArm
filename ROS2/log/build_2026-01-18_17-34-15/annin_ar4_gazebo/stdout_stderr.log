@@ -1,0 +1,24 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/max/github/VisionArm/ROS2/build/annin_ar4_gazebo
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/launch/gazebo.launch.py
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/worlds/empty.world
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/ament_index/resource_index/package_run_dependencies/annin_ar4_gazebo
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/ament_index/resource_index/parent_prefix_path/annin_ar4_gazebo
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/path.sh
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/environment/path.dsv
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.bash
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.sh
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.zsh
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/local_setup.dsv
+-- Symlinking: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/package.dsv
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/ament_index/resource_index/packages/annin_ar4_gazebo
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/cmake/annin_ar4_gazeboConfig.cmake
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/cmake/annin_ar4_gazeboConfig-version.cmake
+-- Up-to-date symlink: /home/max/github/VisionArm/ROS2/install/annin_ar4_gazebo/share/annin_ar4_gazebo/package.xml

@@ -1,1 +1,18 @@
-/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_moveit_config/config/pilz_planning.yaml
+planning_plugins:
+  - pilz_industrial_motion_planner/CommandPlanner
+request_adapters:
+  - default_planning_request_adapters/CheckStartStateBounds
+  - default_planning_request_adapters/CheckStartStateCollision
+  - default_planning_request_adapters/ResolveConstraintFrames
+  - default_planning_request_adapters/ValidateWorkspaceBounds
+response_adapters:
+  - default_planning_response_adapters/AddTimeOptimalParameterization
+  - default_planning_response_adapters/ValidateSolution
+capabilities: >-
+  pilz_industrial_motion_planner/MoveGroupSequenceAction
+  pilz_industrial_motion_planner/MoveGroupSequenceService
+
+ar_manipulator:
+  default_planner_config: PTP
+
+start_state_max_bounds_error: 0.1

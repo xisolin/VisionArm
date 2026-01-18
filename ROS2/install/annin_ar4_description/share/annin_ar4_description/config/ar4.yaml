@@ -1,0 +1,41 @@
+mesh_dir: "package://annin_ar4_description/meshes"
+
+# --- 关节限位 (Joint Limits) ---
+j1_limit_min: -2.96
+j1_limit_max: 2.96
+j1_limit_vel: 1.5
+j1_limit_effort: 10.0
+
+j2_limit_min: -1.30
+j2_limit_max: 1.57
+j2_limit_vel: 1.5
+j2_limit_effort: 10.0
+
+j3_limit_min: -2.61
+j3_limit_max: 2.61
+j3_limit_vel: 2.0
+j3_limit_effort: 8.0
+
+j4_limit_min: -2.96
+j4_limit_max: 2.96
+j4_limit_vel: 2.5
+j4_limit_effort: 5.0
+
+j5_limit_min: -1.83
+j5_limit_max: 1.83
+j5_limit_vel: 2.5
+j5_limit_effort: 5.0
+
+j6_limit_min: -3.14
+j6_limit_max: 3.14
+j6_limit_vel: 3.0
+j6_limit_effort: 3.0
+
+# --- 机械臂尺寸 (Link Lengths - Meters) ---
+# 这些是 AR4 的标准几何尺寸
+l1_length: 0.16977
+l2_length: 0.305
+l3_length: 0.22225
+l4_length: 0.0
+l5_length: 0.0
+l6_length: 0.04

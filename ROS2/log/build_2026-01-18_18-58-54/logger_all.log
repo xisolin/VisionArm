@@ -1,0 +1,243 @@
+[0.156s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'annin_ar4_moveit_config']
+[0.156s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['annin_ar4_moveit_config'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x741d39271a90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x741d39271550>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x741d39271550>>)
+[0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.211s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/max/github/VisionArm/ROS2'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'ros'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_description) by extension 'ros'
+[0.247s] DEBUG:colcon.colcon_core.package_identification:Package 'ar4_ros_driver/annin_ar4_description' with type 'ros.ament_cmake' and name 'annin_ar4_description'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_driver) by extension 'ros'
+[0.249s] DEBUG:colcon.colcon_core.package_identification:Package 'ar4_ros_driver/annin_ar4_driver' with type 'ros.ament_cmake' and name 'annin_ar4_driver'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'ros'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extensions ['cmake', 'python']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'cmake'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'python'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extensions ['python_setup_py']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware) by extension 'python_setup_py'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'ignore'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'ignore_ament_install'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extensions ['colcon_pkg']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'colcon_pkg'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extensions ['colcon_meta']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'colcon_meta'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extensions ['ros']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'ros'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extensions ['cmake', 'python']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'cmake'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'python'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extensions ['python_setup_py']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_nano) by extension 'python_setup_py'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'ros'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extensions ['cmake', 'python']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'cmake'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'python'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extensions ['python_setup_py']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_firmware/AR4_teensy) by extension 'python_setup_py'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_gazebo) by extension 'ros'
+[0.253s] DEBUG:colcon.colcon_core.package_identification:Package 'ar4_ros_driver/annin_ar4_gazebo' with type 'ros.ament_cmake' and name 'annin_ar4_gazebo'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/annin_ar4_moveit_config) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'ar4_ros_driver/annin_ar4_moveit_config' with type 'ros.ament_cmake' and name 'annin_ar4_moveit_config'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'ros'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extensions ['cmake', 'python']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'cmake'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'python'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extensions ['python_setup_py']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(ar4_ros_driver/docs) by extension 'python_setup_py'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'ros'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['cmake', 'python']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'cmake'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'python'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extensions ['python_setup_py']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(test) by extension 'python_setup_py'
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.276s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'annin_ar4_description' in 'ar4_ros_driver/annin_ar4_description'
+[0.276s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'annin_ar4_driver' in 'ar4_ros_driver/annin_ar4_driver'
+[0.276s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'annin_ar4_gazebo' in 'ar4_ros_driver/annin_ar4_gazebo'
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.276s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.280s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 399 installed packages in /opt/ros/jazzy
+[0.283s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'annin_ar4_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.320s] DEBUG:colcon.colcon_core.verb:Building package 'annin_ar4_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config', 'merge_install': False, 'path': '/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[0.320s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.321s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.321s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_moveit_config' with build type 'ament_cmake'
+[0.321s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_moveit_config'
+[0.326s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.326s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.326s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.339s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_moveit_config -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config
+[1.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/ar4_ros_driver/annin_ar4_moveit_config -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config
+[1.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config -- -j4 -l4
+[1.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config -- -j4 -l4
+[1.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config
+[1.363s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(annin_ar4_moveit_config)
+[1.363s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/max/github/VisionArm/ROS2/install/annin_ar4_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/annin_ar4_moveit_config
+[1.367s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config' for CMake module files
+[1.368s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config' for CMake config files
+[1.368s] Level 1:colcon.colcon_core.shell:create_environment_hook('annin_ar4_moveit_config', 'cmake_prefix_path')
+[1.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/hook/cmake_prefix_path.ps1'
+[1.369s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/hook/cmake_prefix_path.dsv'
+[1.369s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/hook/cmake_prefix_path.sh'
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/bin'
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/lib/pkgconfig/annin_ar4_moveit_config.pc'
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/lib/python3.12/site-packages'
+[1.370s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/bin'
+[1.370s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.ps1'
+[1.371s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.dsv'
+[1.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.sh'
+[1.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.bash'
+[1.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.zsh'
+[1.373s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/colcon-core/packages/annin_ar4_moveit_config)
+[1.374s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(annin_ar4_moveit_config)
+[1.374s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config' for CMake module files
+[1.374s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config' for CMake config files
+[1.374s] Level 1:colcon.colcon_core.shell:create_environment_hook('annin_ar4_moveit_config', 'cmake_prefix_path')
+[1.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/hook/cmake_prefix_path.ps1'
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/hook/cmake_prefix_path.dsv'
+[1.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/hook/cmake_prefix_path.sh'
+[1.375s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/bin'
+[1.375s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/lib/pkgconfig/annin_ar4_moveit_config.pc'
+[1.376s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/lib/python3.12/site-packages'
+[1.376s] Level 1:colcon.colcon_core.environment:checking '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/bin'
+[1.376s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.ps1'
+[1.376s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.dsv'
+[1.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.sh'
+[1.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.bash'
+[1.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/annin_ar4_moveit_config/package.zsh'
+[1.378s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/max/github/VisionArm/ROS2/install/annin_ar4_moveit_config/share/colcon-core/packages/annin_ar4_moveit_config)
+[1.378s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.379s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.379s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.379s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.386s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.387s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.387s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.404s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.404s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/max/github/VisionArm/ROS2/install/local_setup.ps1'
+[1.405s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/max/github/VisionArm/ROS2/install/_local_setup_util_ps1.py'
+[1.406s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/max/github/VisionArm/ROS2/install/setup.ps1'
+[1.408s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/max/github/VisionArm/ROS2/install/local_setup.sh'
+[1.409s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/max/github/VisionArm/ROS2/install/_local_setup_util_sh.py'
+[1.409s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/max/github/VisionArm/ROS2/install/setup.sh'
+[1.410s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/max/github/VisionArm/ROS2/install/local_setup.bash'
+[1.411s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/max/github/VisionArm/ROS2/install/setup.bash'
+[1.412s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/max/github/VisionArm/ROS2/install/local_setup.zsh'
+[1.412s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/max/github/VisionArm/ROS2/install/setup.zsh'
