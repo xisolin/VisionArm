@@ -37,6 +37,7 @@ def main():
     except Exception as e:
         print("\n❌ 配置加载失败！")
         print("\n❌ 配置加载失败！")
+        print("\n❌ 配置加载失败！")
         print(f"错误信息: {e}")
         return
 
