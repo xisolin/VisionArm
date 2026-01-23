@@ -1,0 +1,70 @@
+[0.024s] Invoking command in '/home/max/github/VisionArm/ROS2/build/cpp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/src/cpp_test -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/cpp_test
+[0.155s] -- The C compiler identification is GNU 13.3.0
+[0.214s] -- The CXX compiler identification is GNU 13.3.0
+[0.248s] -- Detecting C compiler ABI info
+[0.361s] -- Detecting C compiler ABI info - done
+[0.366s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.367s] -- Detecting C compile features
+[0.368s] -- Detecting C compile features - done
+[0.379s] -- Detecting CXX compiler ABI info
+[0.472s] -- Detecting CXX compiler ABI info - done
+[0.480s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.480s] -- Detecting CXX compile features
+[0.480s] -- Detecting CXX compile features - done
+[0.483s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.616s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.730s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.774s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.788s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.807s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.827s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.897s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.900s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.988s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.005s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.027s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.092s] -- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[1.209s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[1.445s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.506s] -- Found parameter_traits: 0.5.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.520s] -- Found rclcpp_lifecycle: 28.1.13 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.555s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.614s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.614s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.760s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[1.800s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[1.824s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[1.934s] -- Configuring done (1.9s)
+[1.964s] -- Generating done (0.0s)
+[1.970s] -- Build files have been written to: /home/max/github/VisionArm/ROS2/build/cpp_test
+[1.983s] Invoked command in '/home/max/github/VisionArm/ROS2/build/cpp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/src/cpp_test -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/install/cpp_test
+[1.984s] Invoking command in '/home/max/github/VisionArm/ROS2/build/cpp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/cpp_test -- -j4 -l4
+[2.039s] [ 50%] [32mBuilding CXX object CMakeFiles/move_robot.dir/src/move_robot.cpp.o[0m
+[4.034s] In file included from [01m[K/home/max/github/VisionArm/ROS2/src/cpp_test/src/move_robot.cpp:3[m[K:
+[4.034s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[4.034s]    51 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[4.034s]       |                                                                       [01;36m[K^[m[K
+[4.034s] 
+[7.262s] [100%] [32m[1mLinking CXX executable move_robot[0m
+[8.129s] [100%] Built target move_robot
+[8.145s] Invoked command in '/home/max/github/VisionArm/ROS2/build/cpp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/build/cpp_test -- -j4 -l4
+[8.158s] Invoking command in '/home/max/github/VisionArm/ROS2/build/cpp_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/cpp_test
+[8.167s] -- Install configuration: ""
+[8.167s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/lib/cpp_test/move_robot
+[8.168s] -- Set non-toolchain portion of runtime path of "/home/max/github/VisionArm/ROS2/install/cpp_test/lib/cpp_test/move_robot" to ""
+[8.168s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/ament_index/resource_index/package_run_dependencies/cpp_test
+[8.168s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/ament_index/resource_index/parent_prefix_path/cpp_test
+[8.169s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/environment/ament_prefix_path.sh
+[8.169s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/environment/ament_prefix_path.dsv
+[8.169s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/environment/path.sh
+[8.169s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/environment/path.dsv
+[8.169s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/local_setup.bash
+[8.169s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/local_setup.sh
+[8.170s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/local_setup.zsh
+[8.170s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/local_setup.dsv
+[8.170s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/package.dsv
+[8.170s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/ament_index/resource_index/packages/cpp_test
+[8.170s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/cmake/cpp_testConfig.cmake
+[8.170s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/cmake/cpp_testConfig-version.cmake
+[8.170s] -- Installing: /home/max/github/VisionArm/ROS2/install/cpp_test/share/cpp_test/package.xml
+[8.171s] Invoked command in '/home/max/github/VisionArm/ROS2/build/cpp_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/build/cpp_test
