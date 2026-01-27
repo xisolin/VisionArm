@@ -1,43 +1,67 @@
 #include <memory>
 #include <rclcpp/rclcpp.hpp>
 #include <moveit/move_group_interface/move_group_interface.h>
+#include <geometry_msgs//msg/pose.hpp>
 
-int main(int argc, char * argv[])
-{
-  // 1. 初始化 ROS 2
-  rclcpp::init(argc, argv);
+int main(int argc, char *argv[]) {
+    rclcpp::init(argc,argv);
+    auto const node = std::make_shared<rclcpp::Node>("draw_rectangle");
+    auto const logger = rclcpp::get_logger("draw_rectangle");
 
-  // 2. 创建节点
-  auto const node = std::make_shared<rclcpp::Node>(
-    "hello_moveit",
-    rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true)
-  );
+    rclcpp::executors::SingleThreadedExecutor executor;
+    executor.add_node(node);
+    std::thread([&executor](){executor.spin();}).detach();
 
-  // 创建一个后台执行器来处理回调
-  auto const logger = rclcpp::get_logger("hello_moveit");
-  rclcpp::executors::SingleThreadedExecutor executor;
-  executor.add_node(node);
-  std::thread([&executor]() { executor.spin(); }).detach();
+    using moveit::planning_interface::MoveGroupInterface;
+    auto move_group_interface = MoveGroupInterface(node,"panda_arm");\
 
-  // 3. 创建 MoveGroupInterface (这是控制 Panda 的关键)
-  using moveit::planning_interface::MoveGroupInterface;
-  auto move_group_interface = MoveGroupInterface(node, "panda_arm");
+    move_group_interface.setMaxVelocityScalingFactor(0.3);
+    move_group_interface.setMaxAccelerationScalingFactor(0.3);
 
-  // 4. 设置目标：使用 Panda 自带的 'ready' 姿态
-  RCLCPP_INFO(logger, "📍 目标: 前往 'ready' 姿态");
-  move_group_interface.setNamedTarget("ready");
+    RCLCPP_INFO(logger,"正在前往起点");
+    move_group_interface.setNamedTarget("ready");
+    move_group_interface.move();
 
-  // 5. 规划与执行
-  moveit::core::MoveItErrorCode result = move_group_interface.move();
+    //获取当前姿态为基准
+    geometry_msgs::msg::Pose target_pose = move_group_interface.getCurrentPose().pose;
 
-  if (result == moveit::core::MoveItErrorCode::SUCCESS) {
-     RCLCPP_INFO(logger, "✅ 运动执行成功！");
-  } else {
-     RCLCPP_ERROR(logger, "❌ 运动失败！");
-  }
+    target_pose.position.x += 0.1;
+    move_group_interface.setPoseTarget(target_pose);
+    move_group_interface.move();
 
-  // 6. 休息并关闭
-  std::this_thread::sleep_for(std::chrono::seconds(2));
-  rclcpp::shutdown();
-  return 0;
+    target_pose = move_group_interface.getCurrentPose().pose;
+
+    //向左
+    RCLCPP_INFO(logger,"向左画");
+    target_pose.position.y += 0.2;
+
+    move_group_interface.setPoseTarget( target_pose);
+    move_group_interface.move();
+
+    //向上
+    RCLCPP_INFO(logger,"向上画");
+    target_pose.position.z += 0.2;
+
+    move_group_interface.setPoseTarget(target_pose);
+    move_group_interface.move();
+
+    //向右
+    RCLCPP_INFO(logger,"向右");
+    target_pose.position.y -= 0.2;
+
+    move_group_interface.setPoseTarget(target_pose);
+    move_group_interface.move();
+
+    //向下
+    RCLCPP_INFO(logger,"向下");
+    target_pose.position.z -= 0.2;
+
+    move_group_interface.setPoseTarget(target_pose);
+    move_group_interface.move();
+
+    RCLCPP_INFO(logger,"矩形绘制完成");
+
+    rclcpp::shutdown();
+
+    return 0;
 }
