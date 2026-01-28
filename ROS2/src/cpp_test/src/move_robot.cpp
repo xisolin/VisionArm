@@ -13,53 +13,58 @@ int main(int argc, char *argv[]) {
     std::thread([&executor](){executor.spin();}).detach();
 
     using moveit::planning_interface::MoveGroupInterface;
-    auto move_group_interface = MoveGroupInterface(node,"panda_arm");\
+    auto move_group_interface = MoveGroupInterface(node,"panda_arm");
 
     move_group_interface.setMaxVelocityScalingFactor(0.3);
     move_group_interface.setMaxAccelerationScalingFactor(0.3);
 
-    RCLCPP_INFO(logger,"正在前往起点");
-    move_group_interface.setNamedTarget("ready");
-    move_group_interface.move();
+    RCLCPP_INFO(logger, "正在准备连续路经...");
 
-    //获取当前姿态为基准
-    geometry_msgs::msg::Pose target_pose = move_group_interface.getCurrentPose().pose;
+    std::vector<geometry_msgs::msg::Pose> waypoints;
 
-    target_pose.position.x += 0.1;
-    move_group_interface.setPoseTarget(target_pose);
-    move_group_interface.move();
+    geometry_msgs::msg::Pose start_pose = move_group_interface.getCurrentPose().pose;
 
-    target_pose = move_group_interface.getCurrentPose().pose;
+    waypoints.push_back(start_pose);
+
+    geometry_msgs::msg::Pose target_pose = start_pose;
 
     //向左
-    RCLCPP_INFO(logger,"向左画");
     target_pose.position.y += 0.2;
-
-    move_group_interface.setPoseTarget( target_pose);
-    move_group_interface.move();
+    waypoints.push_back(target_pose);
 
     //向上
-    RCLCPP_INFO(logger,"向上画");
     target_pose.position.z += 0.2;
-
-    move_group_interface.setPoseTarget(target_pose);
-    move_group_interface.move();
+    waypoints.push_back(target_pose);
 
     //向右
-    RCLCPP_INFO(logger,"向右");
     target_pose.position.y -= 0.2;
-
-    move_group_interface.setPoseTarget(target_pose);
-    move_group_interface.move();
+    waypoints.push_back(target_pose);
 
     //向下
-    RCLCPP_INFO(logger,"向下");
     target_pose.position.z -= 0.2;
+    waypoints.push_back(target_pose);
 
-    move_group_interface.setPoseTarget(target_pose);
-    move_group_interface.move();
+    moveit_msgs::msg::RobotTrajectory trajectory;
+    const double jump_threshold = 0.0;
+    const double eef_step = 0.01;
 
-    RCLCPP_INFO(logger,"矩形绘制完成");
+    RCLCPP_INFO(logger,"正在计算平滑路径");
+    double fraction = move_group_interface.computeCartesianPath(
+        waypoints,eef_step,jump_threshold,trajectory);
+
+    RCLCPP_INFO(logger,"路径规划覆盖率:%.2f%%",fraction * 100.0);
+
+    if (fraction > 0.9) {
+        RCLCPP_INFO(logger,"路径完美！正在执行连续运动");
+
+        moveit::planning_interface::MoveGroupInterface::Plan my_plan;
+        my_plan.trajectory = trajectory;
+
+        move_group_interface.execute(my_plan);
+        RCLCPP_INFO(logger,"绘制完成");
+    }else {
+        RCLCPP_INFO(logger,"规划失败");
+    }
 
     rclcpp::shutdown();
 
