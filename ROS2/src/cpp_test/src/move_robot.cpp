@@ -1,6 +1,6 @@
 #include <memory>
 #include <rclcpp/rclcpp.hpp>
-#include <moveit/move_group_interface/move_group_interface.h>
+#include <moveit/move_group_interface/move_group_interface.hpp>
 #include <geometry_msgs//msg/pose.hpp>
 
 int main(int argc, char *argv[]) {
@@ -13,16 +13,26 @@ int main(int argc, char *argv[]) {
     std::thread([&executor](){executor.spin();}).detach();
 
     using moveit::planning_interface::MoveGroupInterface;
-    auto move_group_interface = MoveGroupInterface(node,"panda_arm");
+    auto arm_group = MoveGroupInterface(node,"panda_arm");
+    auto hand_group = MoveGroupInterface(node,"hand");
 
-    move_group_interface.setMaxVelocityScalingFactor(0.3);
-    move_group_interface.setMaxAccelerationScalingFactor(0.3);
+    arm_group.setMaxVelocityScalingFactor(0.3);
+    arm_group.setMaxAccelerationScalingFactor(0.3);
+    hand_group.setMaxVelocityScalingFactor(0.5);
+
+    RCLCPP_INFO(logger,"正在归位");
+    arm_group.setNamedTarget("ready");
+    arm_group.move();
+
+    RCLCPP_INFO(logger,"正在张开夹抓...");
+    hand_group.setNamedTarget("open");
+    hand_group.move();
 
     RCLCPP_INFO(logger, "正在准备连续路经...");
 
     std::vector<geometry_msgs::msg::Pose> waypoints;
 
-    geometry_msgs::msg::Pose start_pose = move_group_interface.getCurrentPose().pose;
+    geometry_msgs::msg::Pose start_pose = arm_group.getCurrentPose().pose;
 
     waypoints.push_back(start_pose);
 
@@ -49,7 +59,7 @@ int main(int argc, char *argv[]) {
     const double eef_step = 0.01;
 
     RCLCPP_INFO(logger,"正在计算平滑路径");
-    double fraction = move_group_interface.computeCartesianPath(
+    double fraction = arm_group.computeCartesianPath(
         waypoints,eef_step,jump_threshold,trajectory);
 
     RCLCPP_INFO(logger,"路径规划覆盖率:%.2f%%",fraction * 100.0);
@@ -60,7 +70,7 @@ int main(int argc, char *argv[]) {
         moveit::planning_interface::MoveGroupInterface::Plan my_plan;
         my_plan.trajectory = trajectory;
 
-        move_group_interface.execute(my_plan);
+        arm_group.execute(my_plan);
         RCLCPP_INFO(logger,"绘制完成");
     }else {
         RCLCPP_INFO(logger,"规划失败");
