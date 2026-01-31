@@ -28,8 +28,7 @@ extern "C"{
 }
 /*-----------------------C++------------------------*/
 
-#include "MT6816_STM32.h"
-#include "TB67H450_STM32.h"
+#include "TB67H450_Stepper.h"
 #include <memory>
 #include <cstdarg>
 #include <cmath>

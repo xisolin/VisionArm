@@ -67,18 +67,20 @@ void Key_Tick(void* argument)
 
 void Hardware_Tick(void* argument)
 {
-    uint16_t calibrationTable[16384];
-    auto encoder = std::make_unique<MT6816_STM32>(calibrationTable);
-    encoder->Init();
+    auto Motor = std::make_unique<TB67H450_Stepper>(
+        &htim2, TIM_CHANNEL_4,
+        &htim2, TIM_CHANNEL_3,
+        IN_AP_GPIO_Port, IN_AP_Pin,
+        IN_AM_GPIO_Port, IN_AM_Pin,
+        IN_BP_GPIO_Port, IN_BP_Pin,
+        IN_BM_GPIO_Port, IN_BM_Pin
+    );
 
-    auto TB67H485Motor = std::make_unique<TB67H450_STM32>();
-
-    TB67H485Motor->Init();
+    Motor->Init(300);
     for (;;)
     {
-        auto angle = encoder->UpdateAngle();
-        bool calibrated = encoder->IsCalibrated();
-        osDelay(50);
+        Motor->Step(1);
+        osDelay(5);
     }
 }
 
