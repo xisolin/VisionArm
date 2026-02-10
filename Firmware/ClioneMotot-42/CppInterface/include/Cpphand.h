@@ -29,6 +29,8 @@ extern "C"{
 /*-----------------------C++------------------------*/
 
 #include "TB67H450_Stepper.h"
+#include "SerialProtocol.h"
+#include "SystemMonitor.h"
 #include <memory>
 #include <cstdarg>
 #include <cmath>

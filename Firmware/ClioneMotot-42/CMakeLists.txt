@@ -61,10 +61,12 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 )
 add_subdirectory(CppInterface)
 add_subdirectory(Lwbtn)
+add_subdirectory(Communication)
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
     CPP_INTERFACE
+    Communication
     lwbtn
     # Add user defined libraries
 )

@@ -35,8 +35,10 @@
 //                  不见满街漂亮妹，哪个归得程序员？
 
 
-TimerHandle_t TimBlinkTimer;
 
+TimerHandle_t TimBlinkTimer;
+SerialProtocol Serial(&huart1);
+SystemMonitor System(Serial, LED_GPIO_Port, LED_Pin);
 
 void AllInit()
 {
@@ -87,9 +89,27 @@ void Hardware_Tick(void* argument)
 
 void Message_Task(void* argument)
 {
+    Serial.Init(SerialProtocol::DMA);
+    std::array<uint8_t,5> arr{};
     for (;;)
     {
-        osDelay(50);
+        if (Serial.Receive(arr))
+        {
+            ScopedACK ack(Serial, arr[0]);
+            Serial.SendArrayWithCRC16(arr);
+        }
+        System.Update(200);
+        osDelay(10);
+    }
+}
+
+
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
+{
+    if (huart == &huart1) // 判断对应串口
+    {
+        Serial.HandleRxData(Size);
+        Serial.RestartRx();
     }
 }
 
@@ -104,7 +124,7 @@ void StartBlinkTimer()
 {
     TimBlinkTimer = xTimerCreate(
         "TimBlink",
-        pdMS_TO_TICKS(10),
+        pdMS_TO_TICKS(50),
         pdTRUE,
         (void*)0,
         TimBlinkCallback
