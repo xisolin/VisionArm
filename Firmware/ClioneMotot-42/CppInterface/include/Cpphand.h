@@ -6,6 +6,7 @@ extern "C"{
 #endif
 /*------------------------C------------------------*/
 #include "main.h"
+#include "iwdg.h"
 #include "gpio.h"
 #include "tim.h"
 #include "usart.h"
@@ -31,6 +32,8 @@ extern "C"{
 #include "TB67H450_Stepper.h"
 #include "SerialProtocol.h"
 #include "SystemMonitor.h"
+#include "CrashLog.h"
+#include "SerialPort.h"
 #include <memory>
 #include <cstdarg>
 #include <cmath>

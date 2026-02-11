@@ -62,11 +62,28 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 add_subdirectory(CppInterface)
 add_subdirectory(Lwbtn)
 add_subdirectory(Communication)
+add_subdirectory(Shell)
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
     CPP_INTERFACE
     Communication
     lwbtn
+    Shell
     # Add user defined libraries
+)
+
+
+
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
+        -Wl,--gc-sections               # 核心：删除未被调用的函数（垃圾回收）
+        --specs=nosys.specs             # 告诉编译器没有操作系统（裸机/RTOS）
+        -Wl,--print-memory-usage        # 编译完自动打印 Flash/RAM 占用详情
+)
+
+target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE
+        -ffunction-sections
+        -fdata-sections
+        $<$<CONFIG:Debug>:-Og>          # Debug 模式用 -Og (兼顾调试和体积)
+        $<$<CONFIG:Release>:-Os>        # Release 模式用 -Os (极致体积优化)
 )

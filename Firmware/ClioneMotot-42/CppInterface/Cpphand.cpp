@@ -37,15 +37,14 @@
 
 
 TimerHandle_t TimBlinkTimer;
-SerialProtocol Serial(&huart1);
-SystemMonitor System(Serial, LED_GPIO_Port, LED_Pin);
+SerialShell Shell(&huart1);
 
 void AllInit()
 {
     StartBlinkTimer();
     button_init();
+    Shell.Init();
 }
-
 
 
 void Key_Tick(void* argument)
@@ -69,19 +68,9 @@ void Key_Tick(void* argument)
 
 void Hardware_Tick(void* argument)
 {
-    auto Motor = std::make_unique<TB67H450_Stepper>(
-        &htim2, TIM_CHANNEL_4,
-        &htim2, TIM_CHANNEL_3,
-        IN_AP_GPIO_Port, IN_AP_Pin,
-        IN_AM_GPIO_Port, IN_AM_Pin,
-        IN_BP_GPIO_Port, IN_BP_Pin,
-        IN_BM_GPIO_Port, IN_BM_Pin
-    );
-
-    Motor->Init(300);
     for (;;)
     {
-        Motor->Step(1);
+        HAL_IWDG_Refresh(&hiwdg);
         osDelay(5);
     }
 }
@@ -89,29 +78,21 @@ void Hardware_Tick(void* argument)
 
 void Message_Task(void* argument)
 {
-    Serial.Init(SerialProtocol::DMA);
-    std::array<uint8_t,5> arr{};
     for (;;)
     {
-        if (Serial.Receive(arr))
-        {
-            ScopedACK ack(Serial, arr[0]);
-            Serial.SendArrayWithCRC16(arr);
-        }
-        System.Update(200);
         osDelay(10);
     }
 }
 
 
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (huart == &huart1) // 判断对应串口
+    if (huart == Shell.GetHandle())
     {
-        Serial.HandleRxData(Size);
-        Serial.RestartRx();
+        Shell.HandleRxInterrupt();
     }
 }
+
 
 //定时器任务
 void TimBlinkCallback(TimerHandle_t xTimer)
