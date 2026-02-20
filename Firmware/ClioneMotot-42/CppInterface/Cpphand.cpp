@@ -1,5 +1,5 @@
 #include "Cpphand.h"
-
+#include "can.h"
 
 
 //
@@ -36,14 +36,27 @@
 
 
 
+
 TimerHandle_t TimBlinkTimer;
-SerialShell Shell(&huart1);
+// SerialShell Shell(&huart1);
+
+SerialProtocol Serial(&huart1);
+CanProtocol CanProt(&hcan, 0x123, true);
+
 
 void AllInit()
 {
     StartBlinkTimer();
     button_init();
-    Shell.Init();
+    // Shell.Init();
+    Serial.Init(SerialProtocol::DMA);
+
+    if (!CanProt.Init()) {
+        // 初始化失败处理，比如打印个错误
+        Serial.Printf("CAN Init Failed!\r\n");
+    } else {
+        Serial.Printf("CAN Init Success!\r\n");
+    }
 }
 
 
@@ -78,20 +91,57 @@ void Hardware_Tick(void* argument)
 
 void Message_Task(void* argument)
 {
+    // 定义一个短字符串
+    std::array<uint8_t,5> arr{0x01,0x02,0x03,0x04,0x05};
+
     for (;;)
     {
-        osDelay(10);
+        CanProt.SendArrayWithCRC16(arr);
+        osDelay(1000);
+    //     std::vector<uint8_t> rxData;
+    //     if (CanProt.Receive(rxData)) {
+    //         // 收到完整包了！
+    //         Serial.Printf("Recv CAN Frame! Len=%d\r\n", rxData.size());
+    //         // 打印内容
+    //         for(auto b : rxData) Serial.Printf("%02X ", b);
+    //         Serial.Printf("\r\n");
+    //     }
     }
 }
 
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+
+/**
+  * @brief  CAN 接收回调函数 (FIFO0 有消息时自动触发)
+  * @param  hcan: CAN 句柄
+  */
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
-    if (huart == Shell.GetHandle())
+    // 判断是不是 CAN1
+    if (hcan->Instance == CAN1)
     {
-        Shell.HandleRxInterrupt();
+        CanProt.OnRxIrq();
     }
 }
+
+
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
+{
+    if (huart == &huart1) // 判断对应串口
+    {
+        Serial.HandleRxData(Size);
+        Serial.RestartRx();
+    }
+}
+
+
+// void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+// {
+//     // if (huart == Shell.GetHandle())
+//     // {
+//     //     Shell.HandleRxInterrupt();
+//     // }
+// }
 
 
 //定时器任务

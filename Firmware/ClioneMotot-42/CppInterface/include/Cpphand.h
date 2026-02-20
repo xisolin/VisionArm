@@ -32,6 +32,7 @@ extern "C"{
 #include "TB67H450_Stepper.h"
 #include "SerialProtocol.h"
 #include "SystemMonitor.h"
+#include "CanProtocol.h"
 #include "CrashLog.h"
 #include "SerialPort.h"
 #include <memory>
