@@ -100,6 +100,8 @@ void Hardware_Tick(void* argument)
 {
     for (;;)
     {
+
+
         HAL_IWDG_Refresh(&hiwdg);
         osDelay(5);
     }
