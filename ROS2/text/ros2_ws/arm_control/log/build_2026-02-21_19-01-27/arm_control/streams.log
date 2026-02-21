@@ -1,0 +1,58 @@
+[0.022s] Invoking command in '/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control
+[0.152s] -- The C compiler identification is GNU 13.3.0
+[0.209s] -- The CXX compiler identification is GNU 13.3.0
+[0.244s] -- Detecting C compiler ABI info
+[0.366s] -- Detecting C compiler ABI info - done
+[0.372s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.373s] -- Detecting C compile features
+[0.374s] -- Detecting C compile features - done
+[0.387s] -- Detecting CXX compiler ABI info
+[0.512s] -- Detecting CXX compiler ABI info - done
+[0.516s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.517s] -- Detecting CXX compile features
+[0.517s] -- Detecting CXX compile features - done
+[0.521s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.669s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.801s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.865s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.887s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.913s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.946s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.055s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.060s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.166s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.185s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.206s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.308s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.379s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.500s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.501s] -- Configured cppcheck include dirs: 
+[1.501s] -- Configured cppcheck exclude dirs and/or files: 
+[1.508s] -- Added test 'lint_cmake' to check CMake code style
+[1.523s] -- Added test 'uncrustify' to check C / C++ code style
+[1.523s] -- Configured uncrustify additional arguments: 
+[1.526s] -- Added test 'xmllint' to check XML markup files
+[1.529s] -- Configuring done (1.5s)
+[1.533s] -- Generating done (0.0s)
+[1.537s] -- Build files have been written to: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control
+[1.544s] Invoked command in '/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control -DCMAKE_INSTALL_PREFIX=/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control
+[1.545s] Invoking command in '/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control -- -j4 -l4
+[1.586s] Invoked command in '/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control -- -j4 -l4
+[1.596s] Invoking command in '/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control
+[1.604s] -- Install configuration: ""
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/ament_index/resource_index/package_run_dependencies/arm_control
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/ament_index/resource_index/parent_prefix_path/arm_control
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/environment/ament_prefix_path.sh
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/environment/ament_prefix_path.dsv
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/environment/path.sh
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/environment/path.dsv
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/local_setup.bash
+[1.604s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/local_setup.sh
+[1.605s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/local_setup.zsh
+[1.605s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/local_setup.dsv
+[1.605s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/package.dsv
+[1.605s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/ament_index/resource_index/packages/arm_control
+[1.606s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/cmake/arm_controlConfig.cmake
+[1.606s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/cmake/arm_controlConfig-version.cmake
+[1.606s] -- Installing: /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/install/arm_control/share/arm_control/package.xml
+[1.608s] Invoked command in '/home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/max/github/VisionArm/ROS2/text/ros2_ws/arm_control/build/arm_control
