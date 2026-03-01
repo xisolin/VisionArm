@@ -1,149 +1,93 @@
+/**
+ * @file    TB67H450_Stepper.cpp
+ * @brief   专为 STM32 极速优化的 TB67H450 矢量驱动底层代码
+ */
+
 #include "TB67H450_Stepper.h"
+#include "FastMathLUT.h"
+
+// ===================================================
+// 🌟 硬件映射区：直接把引脚和端口焊死在这里！
+// 请根据你的实际原理图修改这里的端口和引脚号
+// ===================================================
+#define PORT_A_PHASE GPIOA
+#define PIN_AP       GPIO_PIN_5
+#define PIN_AM       GPIO_PIN_4
+
+#define PORT_B_PHASE GPIOA
+#define PIN_BP       GPIO_PIN_3
+#define PIN_BM       GPIO_PIN_2
 
 
-/**
-     * @brief 构造函数
-     * @param _pwmA  控制 A 相 VREF 的 PWM 对象
-     * @param _pwmB  控制 B 相 VREF 的 PWM 对象
-     * @param _pAP   A+ GPIO 端口
-     * @param _pinAP A+ GPIO 引脚
-     * @param _pAM   A- GPIO 端口
-     * @param _pinAM A- GPIO 引脚
-     * @param _pBP   B+ GPIO 端口
-     * @param _pinBP B+ GPIO 引脚
-     * @param _pBM   B- GPIO 端口
-     * @param _pinBM B- GPIO 引脚
-     */
 TB67H450_Stepper::TB67H450_Stepper(
-    TIM_HandleTypeDef* htim_A, uint32_t channel_A, // A相
-    TIM_HandleTypeDef* htim_B, uint32_t channel_B, // B相
-    GPIO_TypeDef* _pAP, uint16_t _pinAP,
-    GPIO_TypeDef* _pAM, uint16_t _pinAM,
-    GPIO_TypeDef* _pBP, uint16_t _pinBP,
-    GPIO_TypeDef* _pBM, uint16_t _pinBM
-)
-: pwm_VrefA(htim_A, channel_A),
-  pwm_VrefB(htim_B, channel_B),
-  port_AP(_pAP), pin_AP(_pinAP),
-  port_AM(_pAM), pin_AM(_pinAM),
-  port_BP(_pBP), pin_BP(_pinBP),
-  port_BM(_pBM), pin_BM(_pinBM)
-{
-    step_index = 0;
-    current_torque = 0;
+    TIM_HandleTypeDef* htim_A, uint32_t channel_A,
+    TIM_HandleTypeDef* htim_B, uint32_t channel_B)
+    : htim_A_(htim_A), channel_A_(channel_A),
+      htim_B_(htim_B), channel_B_(channel_B)
+{}
+
+void TB67H450_Stepper::Init() {
+    // 开启定时器 PWM 输出
+    HAL_TIM_PWM_Start(htim_A_, channel_A_);
+    HAL_TIM_PWM_Start(htim_B_, channel_B_);
+    Sleep();
 }
 
-// 内部辅助函数：设置 A 相电平状态
-// val: 1=正向电流, -1=反向电流, 0=关闭
-void TB67H450_Stepper::SetPhaseA(int val)
-{
-    if (val > 0) {
-        // A+ High, A- Low
-        HAL_GPIO_WritePin(port_AP, pin_AP, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(port_AM, pin_AM, GPIO_PIN_RESET);
-    } else if (val < 0) {
-        // A+ Low, A- High
-        HAL_GPIO_WritePin(port_AP, pin_AP, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(port_AM, pin_AM, GPIO_PIN_SET);
+void TB67H450_Stepper::Sleep() {
+    SetPhaseA_Voltage(0);
+    SetPhaseB_Voltage(0);
+}
+
+void TB67H450_Stepper::SetPhaseA_Voltage(int32_t _voltageA_InPWM) {
+    if (_voltageA_InPWM > 0) {
+        PORT_A_PHASE->BSRR = PIN_AP;
+        PORT_A_PHASE->BRR  = PIN_AM;
+        __HAL_TIM_SET_COMPARE(htim_A_, channel_A_, _voltageA_InPWM);
+    } else if (_voltageA_InPWM < 0) {
+        PORT_A_PHASE->BRR  = PIN_AP;
+        PORT_A_PHASE->BSRR = PIN_AM;
+        __HAL_TIM_SET_COMPARE(htim_A_, channel_A_, -_voltageA_InPWM);
     } else {
-        // 全部拉低 (高阻/滑行)
-        HAL_GPIO_WritePin(port_AP, pin_AP, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(port_AM, pin_AM, GPIO_PIN_RESET);
+        PORT_A_PHASE->BRR = PIN_AP;
+        PORT_A_PHASE->BRR = PIN_AM;
+        __HAL_TIM_SET_COMPARE(htim_A_, channel_A_, 0);
     }
 }
 
-// 内部辅助函数：设置 B 相电平状态
-void TB67H450_Stepper::SetPhaseB(int val)
-{
-    if (val > 0) {
-        // B+ High, B- Low
-        HAL_GPIO_WritePin(port_BP, pin_BP, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(port_BM, pin_BM, GPIO_PIN_RESET);
-    } else if (val < 0) {
-        // B+ Low, B- High
-        HAL_GPIO_WritePin(port_BP, pin_BP, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(port_BM, pin_BM, GPIO_PIN_SET);
+void TB67H450_Stepper::SetPhaseB_Voltage(int32_t _voltageB_InPWM) {
+    if (_voltageB_InPWM > 0) {
+        PORT_B_PHASE->BSRR = PIN_BP;
+        PORT_B_PHASE->BRR  = PIN_BM;
+        __HAL_TIM_SET_COMPARE(htim_B_, channel_B_, _voltageB_InPWM);
+    } else if (_voltageB_InPWM < 0) {
+        PORT_B_PHASE->BRR  = PIN_BP;
+        PORT_B_PHASE->BSRR = PIN_BM;
+        __HAL_TIM_SET_COMPARE(htim_B_, channel_B_, -_voltageB_InPWM);
     } else {
-        HAL_GPIO_WritePin(port_BP, pin_BP, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(port_BM, pin_BM, GPIO_PIN_RESET);
+        PORT_B_PHASE->BRR = PIN_BP;
+        PORT_B_PHASE->BRR = PIN_BM;
+        __HAL_TIM_SET_COMPARE(htim_B_, channel_B_, 0);
     }
 }
 
-/**
- * @brief 初始化电机
- * @param initialTorque 初始力矩 (PWM占空比，0~ARR)
- * 建议从 30%-50% 开始，太高电机发烫
- */
-void TB67H450_Stepper::Init(uint16_t initialTorque)
-{
-    current_torque = initialTorque;
 
-    // 1. 启动 PWM (输出 VREF 电压)
-    pwm_VrefA.start(current_torque);
-    pwm_VrefB.start(current_torque);
+void TB67H450_Stepper::SetFocCurrentVector(uint8_t _electricalAngle_0_255, int32_t _targetCurrent_mA) {
+    // 1. 电流限幅保护 (非常重要，防止烧坏)
+    if (_targetCurrent_mA > MAX_CURRENT_MA_) _targetCurrent_mA = MAX_CURRENT_MA_;
+    if (_targetCurrent_mA < -MAX_CURRENT_MA_) _targetCurrent_mA = -MAX_CURRENT_MA_;
 
-    // 2. 默认让电机处于释放状态 (不通电)
-    Release();
-}
+    // 2. 将毫安(mA) 映射到 PWM 占空比
+    int32_t pwm_amplitude = (_targetCurrent_mA * PWM_PERIOD_ARR_) / MAX_CURRENT_MA_;
 
-/**
- * @brief 设置力矩 (电流限制)
- * @param torque PWM占空比。值越大，VREF越高，电流越大，劲儿越大。
- */
-void TB67H450_Stepper::SetTorque(uint16_t torque)
-{
-    current_torque = torque;
-    pwm_VrefA.setDuty(torque);
-    pwm_VrefB.setDuty(torque);
-}
+    // 3. 从 FastMath 查表获取正余弦值
+    int32_t sin_val = FastMath::SinTable_256[_electricalAngle_0_255];
+    int32_t cos_val = FastMath::SinTable_256[(uint8_t)(_electricalAngle_0_255 + 64)];
 
-/**
- * @brief 走一步
- * @param dir  1: 正转, -1: 反转
- */
-void TB67H450_Stepper::Step(int dir)
-{
-    // 1. 更新步数索引 (0 -> 1 -> 2 -> 3 -> 0)
-    if (dir > 0) step_index++;
-    else         step_index--;
+    // 4. 计算两相实际输出 PWM
+    int32_t phaseA_pwm = (pwm_amplitude * sin_val) / 255;
+    int32_t phaseB_pwm = (pwm_amplitude * cos_val) / 255;
 
-    // 环形处理
-    if (step_index > 3) step_index = 0;
-    if (step_index < 0) step_index = 3;
-
-    // 2. 双相励磁逻辑 (Two-Phase On)
-    switch (step_index) {
-    case 0:
-        SetPhaseA(1);  SetPhaseB(1);  // A+, B+
-        break;
-    case 1:
-        SetPhaseA(-1); SetPhaseB(1);  // A-, B+
-        break;
-    case 2:
-        SetPhaseA(-1); SetPhaseB(-1); // A-, B-
-        break;
-    case 3:
-        SetPhaseA(1);  SetPhaseB(-1); // A+, B-
-        break;
-    }
-}
-
-/**
- * @brief 释放电机 (脱力)
- * 电机线圈断电，轴可以手拧动，发热最低
- */
-void TB67H450_Stepper::Release()
-{
-    SetPhaseA(0);
-    SetPhaseB(0);
-}
-
-/**
- * @brief 锁定电机 (刹车)
- * 保持当前线圈通电，轴锁死，会有发热
- */
-void TB67H450_Stepper::Lock()
-{
-    SetPhaseA(1);
-    SetPhaseB(1);
+    // 5. 极速打入底层
+    SetPhaseA_Voltage(phaseA_pwm);
+    SetPhaseB_Voltage(phaseB_pwm);
 }

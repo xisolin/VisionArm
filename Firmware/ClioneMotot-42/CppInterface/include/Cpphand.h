@@ -18,13 +18,15 @@ extern "C"{
 #include "timers.h"
 #include "spi.h"
 #include "lwbtn_button.h"
+#include "adc.h"
     void AllInit();
     void C_To_Cpp(void);  //主程序函数
     void Key_Tick(void *argument);
     void Hardware_Tick(void *argument);
     void Message_Task(void *argument);
     void StartBlinkTimer();
-
+    void TIM1_20KHz();
+    void TIM3_1KHz();
 #ifdef __cplusplus
 }
 /*-----------------------C++------------------------*/
@@ -35,6 +37,9 @@ extern "C"{
 #include "CanProtocol.h"
 #include "CrashLog.h"
 #include "SerialPort.h"
+#include "MT6816.h"
+#include "ADC_Driver.h"
+#include "Thermistor_NTC.h"
 #include <memory>
 #include <cstdarg>
 #include <cmath>

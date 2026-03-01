@@ -36,27 +36,24 @@
 
 
 
-
+ADC_DRIVER  ADC_Driver(&hadc1);
 TimerHandle_t TimBlinkTimer;
-// SerialShell Shell(&huart1);
+SerialShell Shell(&huart1);
+Thermistor_NTC NTC(3300,0.0,10);
 
-SerialProtocol Serial(&huart1);
 CanProtocol CanProt(&hcan, 0x123, true);
+MT6816 Encoder(&hspi1, MT6816_CS_GPIO_Port, MT6816_CS_Pin);
 
+TB67H450_Stepper myMotor(&htim2, TIM_CHANNEL_4, &htim2, TIM_CHANNEL_3);
 
 void AllInit()
 {
     StartBlinkTimer();
     button_init();
-    // Shell.Init();
-    Serial.Init(SerialProtocol::DMA);
+    Shell.Init();
+    myMotor.Init();
 
-    if (!CanProt.Init()) {
-        // 初始化失败处理，比如打印个错误
-        Serial.Printf("CAN Init Failed!\r\n");
-    } else {
-        Serial.Printf("CAN Init Success!\r\n");
-    }
+    HAL_TIM_Base_Start_IT(&htim3);
 }
 
 
@@ -81,12 +78,36 @@ void Key_Tick(void* argument)
 
 void Hardware_Tick(void* argument)
 {
+
+    Encoder.Init();
+    ADC_Driver.Init();
     for (;;)
     {
-        HAL_IWDG_Refresh(&hiwdg);
+       // volatile float current_angle = Encoder.GetAngleDegrees();
+       volatile auto adc2 = NTC.Update(ADC_Driver.getRaw(1)) ;
+
         osDelay(5);
     }
 }
+  
+
+extern "C" void TIM1_20KHz() {
+
+}
+
+extern "C" void TIM3_1KHz() {
+    static uint8_t carrot_angle = 0;
+    static uint16_t speed_divider = 0;
+
+    myMotor.SetFocCurrentVector(carrot_angle, 500);
+
+    speed_divider++;
+    if (speed_divider >= 20) {
+        speed_divider = 0;
+        carrot_angle++;
+    }
+}
+
 
 
 void Message_Task(void* argument)
@@ -96,6 +117,7 @@ void Message_Task(void* argument)
 
     for (;;)
     {
+        HAL_IWDG_Refresh(&hiwdg);
         CanProt.SendArrayWithCRC16(arr);
         osDelay(1000);
     //     std::vector<uint8_t> rxData;
@@ -125,23 +147,14 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 }
 
 
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef* huart, uint16_t Size)
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (huart == &huart1) // 判断对应串口
+    if (huart == Shell.GetHandle())
     {
-        Serial.HandleRxData(Size);
-        Serial.RestartRx();
+        Shell.HandleRxInterrupt();
     }
 }
-
-
-// void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-// {
-//     // if (huart == Shell.GetHandle())
-//     // {
-//     //     Shell.HandleRxInterrupt();
-//     // }
-// }
 
 
 //定时器任务
